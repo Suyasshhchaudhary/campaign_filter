@@ -6,5 +6,6 @@ Rails.application.routes.draw do
       end
     end
   end
-  root 'users#index'
+  root 'application#up'
+  get '/up', to: 'application#up'
 end

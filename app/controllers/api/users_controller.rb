@@ -1,5 +1,4 @@
 class Api::UsersController < ApplicationController
-  protect_from_forgery with: :null_session, only: [:create]
 
   def index
     @users = User.all
@@ -24,6 +23,6 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, campaigns_list: [])
+    params.require(:user).permit(:name, :email, campaigns_list: [:campaign_name, :campaign_id])
   end
 end

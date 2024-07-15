@@ -2,9 +2,10 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  host: localhost
+  username: <%= ENV.fetch("DB_USERNAME", 'root') %>
+  password: <%= ENV.fetch("DB_PASSWORD", 'password') %>
+  host: <%= ENV.fetch("DB_HOST", '192.168.1.2') %>
+  port: <%= ENV.fetch("PORT", '3307') %>
 
 development:
   <<: *default
@@ -17,5 +18,5 @@ test:
 production:
   <<: *default
   database: campaign_filter_api_production
-  username: <%= ENV['CAMPAIGN_FILTER_API_DATABASE_USERNAME'] %>
-  password: <%= ENV['CAMPAIGN_FILTER_API_DATABASE_PASSWORD'] %>
+
+
