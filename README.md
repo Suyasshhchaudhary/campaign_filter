@@ -1,25 +1,12 @@
-# README
+# Ruby on Rails Users API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+This Ruby on Rails application provides an API to manage users and filter them based on campaign names present in their `campaigns_list`. The application includes endpoints to list all users, add new users, and filter users by campaign names. It is deployed on an EC2 instance.
 
-* Ruby version
+## Features
 
-* System dependencies
+- **List Users:** Retrieve all users from the database.
+- **Add New User:** Add a new user with name, email, and campaigns_list.
+- **Filter Users by Campaign Names:** Retrieve users whose `campaigns_list` contains any of the specified campaign names.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# campaign_filter
